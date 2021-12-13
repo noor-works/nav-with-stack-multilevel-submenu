@@ -6,9 +6,9 @@
 
 /* Variables */
 :root {
-  --accent: #132f4c;
+  --accent: #1d2141;
   --light: #aab4be;
-  --darker: #0a1929;
+  --dark: #12141d;
   --nav-height: 5rem;
   --menu-width: 10rem;
   --box-shadow: inset 0px -1px 1px var(--accent);
@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  background-color: var(--accent);
+  background-color: var(--dark);
 }
 /* Reusuable Class */
 .container {
@@ -64,7 +64,7 @@ body {
 
 /* Header */
 .header {
-  background-color: var(--darker);
+  background-color: var(--dark);
   box-shadow: var(--box-shadow);
   backdrop-filter: var(--blur);
 }
@@ -125,7 +125,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--darker);
+  background-color: var(--dark);
   display: none;
   border: var(--border);
   border-radius: var(--border-radius);
@@ -171,8 +171,8 @@ body {
     display: block;
   }
 
-  .menu-item-has-children .menu-item-has-children > a::after {
-    content: "\f054";
+  .menu-item-has-children > a::after {
+    content: "\f078";
   }
 
   .navbar-nav > .menu-item-has-children > a::after {
@@ -209,7 +209,7 @@ body {
     position: fixed;
     top: var(--nav-height);
     inset-inline: 0;
-    background-color: var(--darker);
+    background-color: var(--dark);
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
@@ -234,7 +234,6 @@ body {
     height: calc(100vh - var(--nav-height) - 10px);
     inset-inline: 0;
     border: none;
-    border-left: var(--border);
     border-radius: 0;
     padding-inline: 1rem;
   }
@@ -243,7 +242,7 @@ body {
     position: fixed;
     top: calc(var(--nav-height) + 10px);
     inset-inline: 1rem;
-    background-color: var(--darker);
+    background-color: var(--dark);
     padding-inline: calc(2rem + 10px);
     margin: 0;
   }
