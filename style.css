@@ -243,6 +243,10 @@ body {
     border: var(--border);
   }
 
+  .menu-item-has-children > a:hover {
+    background-color: var(--dark);
+  }
+
   .menu-item-has-children > a.active {
     position: fixed;
     top: calc(var(--nav-height) + 0.5rem);
