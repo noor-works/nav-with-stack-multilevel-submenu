@@ -25,6 +25,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {
@@ -238,17 +239,17 @@ body {
     padding-inline: 1rem;
   }
 
-  .menu-item-has-children > a.active {
-    position: fixed;
-    top: calc(var(--nav-height) + 10px);
-    inset-inline: 1rem;
-    background-color: var(--dark);
-    padding-inline: calc(2rem + 10px);
-    margin: 0;
+  .menu-item-has-children > a {
+    border: var(--border);
   }
 
-  .menu-item-has-children > a.active:hover {
-    background-color: var(--accent);
+  .menu-item-has-children > a.active {
+    position: fixed;
+    top: calc(var(--nav-height) + 0.5rem);
+    inset-inline: 1rem;
+    background-color: var(--dark);
+    padding-inline: calc(1rem + 10px);
+    margin: 0;
   }
 
   .menu-item-has-children > a.active + .sub-menu {
