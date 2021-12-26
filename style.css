@@ -215,13 +215,14 @@ body {
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
-    max-height: calc(100vh - var(--nav-height));
+    height: calc(100vh - var(--nav-height));
     overflow-y: scroll;
     transition: var(--smooth);
     gap: 1rem;
   }
 
-  .navbar-nav::-webkit-scrollbar {
+  .navbar-nav::-webkit-scrollbar,
+  .sub-menu::-webkit-scrollbar {
     width: 0;
   }
 
@@ -237,13 +238,15 @@ body {
   .sub-menu {
     position: fixed;
     top: calc(var(--nav-height) + calc(var(--nav-height) / 2) + 10px);
-    max-height: calc(
-      100vh - (var(--nav-height) + calc(var(--nav-height) / 2))- 10px
+    height: calc(
+      100vh - (var(--nav-height) + calc(var(--nav-height) / 2) + 10px)
     );
     inset-inline: 0;
     border: none;
     border-radius: 0;
     padding-inline: 1rem;
+    background-color: var(--dark);
+    overflow-y: scroll;
   }
 
   .menu-item-has-children > a {
@@ -283,5 +286,7 @@ body {
     top: calc(var(--nav-height) + calc(var(--nav-height) / 2) + 10px);
     left: 0;
     padding-inline: 1rem;
+    background-color: var(--dark);
+    z-index: 1;
   }
 }
