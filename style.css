@@ -237,9 +237,9 @@ body {
 
   .sub-menu {
     position: fixed;
-    top: calc(var(--nav-height) + calc(var(--nav-height) / 2) + 10px);
+    top: calc(var(--nav-height) + calc(var(--nav-height) / 2) + 1rem);
     height: calc(
-      100vh - (var(--nav-height) + calc(var(--nav-height) / 2) + 10px)
+      100vh - (var(--nav-height) + calc(var(--nav-height) / 2) + 1rem)
     );
     inset-inline: 0;
     border: none;
@@ -267,7 +267,8 @@ body {
   }
 
   .menu-item-has-children > a.active + .sub-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .menu-item-has-children > a.active::after,
@@ -283,7 +284,7 @@ body {
   }
 
   .sub-menu .sub-menu {
-    top: calc(var(--nav-height) + calc(var(--nav-height) / 2) + 10px);
+    top: calc(var(--nav-height) + calc(var(--nav-height) / 2) + 1rem);
     left: 0;
     padding-inline: 1rem;
     background-color: var(--dark);
